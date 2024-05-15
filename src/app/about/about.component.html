@@ -1,0 +1,50 @@
+<br><br>
+<fieldset class="fsbtn" [ngClass]="{'invert-colors': invertColors}" >
+ <legend class="accessibility"><b>Accessibility</b></legend>
+
+<div id="app-cover">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-1">
+          <input type="checkbox" class="checkbox" (click)="toggleColors()" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>  
+</div>
+</fieldset>
+<fieldset class="fs" [ngClass]="{'invert-colors': invertColors}" >
+  <legend class="legend">About us</legend>
+  <h2 class="text-center font-weight-bold">iDevice</h2>
+  <h2 class="text-center">is a site for selling computers from a variety of brands, including</h2>
+  <h2 class="text-center">Apple, Asus, Dell, Lenovo, Microsoft</h2>
+  <h2 class="text-center">The site was built by two people, Eti Ben Zur and Adir Amar</h2>
+  <h2 class="text-center font-weight-bold">our vision:</h2>
+  <h2 class="text-center">Our vision is to be the leading computer website in Israel.</h2>
+  <h2 class="text-center">We want to provide our customers with the widest variety of computers, at the best prices.</h2>
+  <h2 class="text-center font-weight-bold">We believe in:</h2>
+  <h2 class="text-center">Excellence: We are always looking for the best way to do things</h2>
+  <h2 class="text-center">Innovation: We are always looking for the newest and best things</h2>
+  <h2 class="text-center">Customer Service: We believe that excellent customer service is essential to success</h2>
+  <h2 class="text-center">If you are looking for a new computer,</h2>
+  <h2 class="text-center font-weight-bold">iDevice</h2>
+  <h2 class="text-center">is the place for you</h2>
+  <h2 class="text-center">We are here to help you find the perfect computer for you</h2>
+
+
+
+  <div class="container">
+    <div class="image" >
+      <img [src]='imgUrl1'/> 
+      <h1 class="imgName" [ngClass]="{'invert-colors': invertColors}">{{name1}}</h1>
+      <h3 class="imgName" [ngClass]="{'invert-colors': invertColors}">ID: {{id1}}</h3>
+    </div>
+    
+    <div class="image" >
+      <img [src]='imgUrl2'/>
+      <h1 class="imgName" [ngClass]="{'invert-colors': invertColors}">{{name2}}</h1>
+      <h3 class="imgName" [ngClass]="{'invert-colors': invertColors}">ID: {{id2}}</h3>
+    </div>
+  </div>
+</fieldset>

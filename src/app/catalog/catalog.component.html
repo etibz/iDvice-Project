@@ -1,0 +1,11 @@
+<div class="row">
+
+    <div class="col-md-2">
+        <app-sidenav (changeType)="setCompType($event)"></app-sidenav>
+    </div>
+
+    <div class="col">
+        <app-products [typeToShow]="type"></app-products>
+    </div>
+    
+</div>

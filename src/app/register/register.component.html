@@ -1,0 +1,82 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image">
+    <h1 class="mb-3 h2">Welcome to iDevice</h1>
+    <p class="mb-3">Create an account</p>
+  </div>
+  <br>
+  <div class="justify-content-center align-items-center w-50 mx-auto" style="max-width: 500px;">
+    <div class="card">
+      <div class="card-body">
+      <H1 class="display-4 mb-4"> Sign Up </H1>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="form-group">
+          <label class="h5">Name:</label>
+          <input type="text" class="form-control form-control-lg" formControlName="name">
+          <div class="text-danger" *ngIf="!registerForm.controls.name?.valid && (registerForm.controls.name?.dirty || registerForm.controls.name?.touched)">invalid name</div>
+        </div>
+        <div class="form-group">
+          <label class="h5">Email:</label>
+          <input type="email" class="form-control form-control-lg" formControlName="email">
+          <div class="text-danger" *ngIf="!registerForm.controls.email?.valid && (registerForm.controls.email?.dirty || registerForm.controls.email?.touched)">invalid email</div>
+        </div>
+        <div class="form-group">
+          <label class="h5">Password:</label>
+          <div class="input-group">
+            <input [type]="hidePassword ? 'password' : 'text'" id="password" class="form-control form-control-lg" formControlName="password">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-outline-secondary" (click)="togglePasswordVisibility()">
+                <i class="fa" [ngClass]="{'fa-eye-slash': hidePassword, 'fa-eye': !hidePassword}"></i>
+              </button>
+            </div>
+          </div>
+          <div class="text-danger" *ngIf="!registerForm.controls.password.valid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)">invalid password</div>
+        </div>
+        <div class="form-group">
+          <label class="h5">Confirm password:</label>
+          <div class="input-group">
+            <input [type]="hidePassword ? 'password' : 'text'" id="confirmPassword" class="form-control form-control-lg" formControlName="confirmPassword">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-outline-secondary" (click)="togglePasswordVisibility()">
+                <i class="fa" [ngClass]="{'fa-eye-slash': hidePassword, 'fa-eye': !hidePassword}"></i>
+              </button>
+            </div>
+          </div>
+          <div class="text-danger" *ngIf="!passwordsMatch && (registerForm.controls.confirmPassword.dirty || registerForm.controls.confirmPassword.touched)">Passwords are not the same!</div>
+        </div>
+        <div class="form-group">
+          <label class="h5">Gender:</label> <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" value="male" formControlName="gender" checked>
+            <label class="form-check-label">male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" value="female" formControlName="gender">
+            <label class="form-check-label">female</label>
+          </div>
+          <div class="text-danger" *ngIf="!registerForm.controls.gender.valid ">invalid gender</div>
+        </div>
+        <div class="form-group">
+          <label class="form-check h5">Date of birth:</label>
+          <input type="date" class="form-control form-control-lg" formControlName="dateOfBirth" placeholder="dd-MM-yyyy" min="01-01-1900" max="31-12-2024" required />
+          <div class="text-danger" *ngIf="!registerForm.controls.dateOfBirth?.valid && (registerForm.controls.dateOfBirth.dirty||registerForm.controls.dateOfBirth?.touched)">invalid date</div>
+        </div>
+        <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary btn-lg btn-block mb-3">Register</button>
+      
+        <!-- Register with google/facebook buttons -->
+        <div class="text-center">
+          <p>or sign up with:</p>
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fa fa-facebook-f"></i>
+          </button>
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fa fa-google"></i>
+          </button>
+        </div>
+      </form>
+  </div>
+</div>
+  </div>
+</section>
+

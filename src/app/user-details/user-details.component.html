@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8"> 
+            <h1 class="text-center" style="font-size: 2.5em;">User Profile</h1>
+            <div class="card">
+                <img [src]="showImg()" class="card-img-top" style="width:200px; height:auto; margin: 0 auto;"> 
+                <div class="card-body">
+                    <h3 class="card-title" style="font-size: 1.5em;">Name: {{showName()}}</h3>
+                    <p class="card-text" style="font-size: 1.2em;">Email: {{email}}</p>
+                    <p class="card-text" style="font-size: 1.2em;">Date of Birth: {{showDateOfBirth()}}</p>
+                    <p class="card-text" style="font-size: 1.2em;">Gender: {{showGender()}}</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

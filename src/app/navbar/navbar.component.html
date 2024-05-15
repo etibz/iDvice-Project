@@ -1,0 +1,32 @@
+<div class="div1">
+<ul class="list">
+    <li>
+        <img src="{{logo}}" class="logo">
+    </li>
+    <li><a routerLink="home" routerLinkActive="active-link" class="link">
+        Home</a></li>
+    <li><a routerLink="catalog" routerLinkActive="active-link" class="link">
+        Catalog</a></li>
+    <li><a routerLink="cart" routerLinkActive="active-link" class="link">
+        Cart</a></li>
+    <li><a routerLink="about" routerLinkActive="active-link" class="link ">
+        About us</a></li>
+    
+    <div *ngIf="!loggedIn; then login else profile"></div>
+    <ng-template #login>
+        <li><a routerLink="profile/login" routerLinkActive="active-link" class="link">Login</a></li>
+    </ng-template>
+    <ng-template #profile>
+        <li class="dropdown " ngbDropdown>
+            <a style="color: white;text-decoration: none;" class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img [src]="showImg()" style="height: 35px;width: 35px;margin-left: 70px;" >
+            </a>
+            <ul class="dropdown-menu"  ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+                <li  class="dropdown-item"><button class="btn btn-link" (click)="userDetails()">User details</button></li>
+                <li class="dropdown-item"><button class="btn btn-link" (click)="logout()">Logout</button></li>
+            </ul>
+        </li>
+    </ng-template>
+  </ul>
+     
+</div>

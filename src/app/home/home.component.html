@@ -1,0 +1,22 @@
+<h1 class="h-100 d-flex align-items-center justify-content-center">Top 5 Products</h1>
+<br>  
+    <div class="d-flex flex-row">
+        <div class="card p-2" *ngFor="let product of topProducts">
+            <img class="card-img-top w-70 " src="{{product.picture}}" alt="Card image cap">
+            <b><div class="card-body text-center"> {{product.title}}
+                <br>
+                <b>{{product.price | currency:'ILS':'symbol':'1.0-0'}}</b>
+                <br><br>
+                <button type="button" class="btn btn-outline-dark">Add to Cart</button>
+            </div></b>
+        </div>
+    </div>
+    <br><br><br><br>
+<div >
+    <h1 class="h-100 d-flex align-items-center justify-content-center">Contact us</h1>    
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <a href="https://www.facebook.com" class="fa fa-facebook p-2"></a>
+        <a href="https://www.twitter.com" class="fa fa-twitter p-2"></a>
+        <a href="https://www.instagram.com" class="fa fa-instagram p-2"></a>
+    </div>
+</div>
