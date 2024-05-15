@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "name": "Naamma Shlomovich",
+      "email": "naamma@gmail.com",
+      "password": "1234",
+      "gender": "female",
+      "dateOfBirth": "14/02/1994",
+      "img": "/assets/img/WomanAvatar.png"
+    },
+    {
+      "name": "'Moshe Aharon",
+      "email": "moshe@gmail.com",
+      "password": "1234",
+      "gender": "male",
+      "dateOfBirth": "12/01/1989",
+      "img": "/assets/img/ManAvatar.png"
+    },
+    {
+      "id": "1e01",
+      "name": "asd",
+      "email": "a@gmail.com",
+      "password": "123456789",
+      "gender": "male",
+      "dateOfBirth": "2024-03-07",
+      "img": "/assets/img/ManAvatar.png"
+    },
+    {
+      "id": "c36b",
+      "name": "eti ben zur",
+      "email": "etibz@gmail.com",
+      "password": "123456789",
+      "gender": "female",
+      "dateOfBirth": "1999-03-13",
+      "img": "/assets/img/WomanAvatar.png"
+    }
+  ]
+}
